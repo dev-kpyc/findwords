@@ -1,4 +1,4 @@
-crosswords
+findwords
 ==========
 
-A crossword puzzle generator
+A word puzzle generator
