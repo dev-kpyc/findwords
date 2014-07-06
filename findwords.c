@@ -25,11 +25,12 @@ char puzzle[DIM][DIM];
 // buffer for storing words to place in the puzzle
 char words[DIM*DIM/2];
 
-// number of times to attempt placement of the puzzle before giving up
+// number of times to attempt placement of the word before giving up
 static const int num_tries = 100;
 // name of the file to read the words from
 static const char * fname = "words.csv";
 
+// place the word at location x, y in the given direction if possible
 bool place(char * word, int x, int y, Direction direction) {
     int len = strlen(word);
     switch(direction) {
@@ -62,6 +63,7 @@ void place_word(char * word) {
     int len = strlen(word);
     int xpos, ypos;
 
+    // find a random location to place the word.
     for(int tries=0; tries<100; tries++) {
         int direction = rand() % 2;
         switch(direction) {
