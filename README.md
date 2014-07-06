@@ -1,4 +1,4 @@
 findwords
 ==========
 
-A word puzzle generator
+A word puzzle generator written in C.
